@@ -72,3 +72,7 @@ form {
 .appearance {
   text-transform: capitalize;
 }
+
+.git-hub {
+  text-align: center;
+}
