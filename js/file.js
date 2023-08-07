@@ -55,6 +55,10 @@ function mainCity() {
     let temperature = Math.round(response.data.main.temp);
     let temp = document.querySelector("#temp");
     temp.innerHTML = `${temperature}°C`;
+    let humidity = document.querySelector("#humidity");
+    humidity.innerHTML = response.data.main.humidity;
+    let wind = document.querySelector("#wind");
+    wind.innerHTML = Math.round(response.data.wind.speed);
   }
   let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -82,6 +86,10 @@ function enterCity(event) {
     let temperature = Math.round(response.data.main.temp);
     let temp = document.querySelector("#temp");
     temp.innerHTML = `${temperature}°C`;
+    let humidity = document.querySelector("#humidity");
+    humidity.innerHTML = response.data.main.humidity;
+    let wind = document.querySelector("#wind");
+    wind.innerHTML = Math.round(response.data.wind.speed);
   }
 
   let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
@@ -89,9 +97,8 @@ function enterCity(event) {
   axios.get(apiUrl).then(currentTemperature);
 
   function currentDescription(response) {
-    let status = response.data.weather[0].description;
     let currentStatus = document.querySelector(".appearance");
-    currentStatus.innerHTML = `${status}`;
+    currentStatus.innerHTML = response.data.weather[0].description;
   }
   axios.get(apiUrl).then(currentDescription);
 }
@@ -112,6 +119,10 @@ function currentLocation(event) {
     let status = response.data.weather[0].description;
     let currentStatus = document.querySelector(".appearance");
     currentStatus.innerHTML = `${status}`;
+    let humidity = document.querySelector("#humidity");
+    humidity.innerHTML = response.data.main.humidity;
+    let wind = document.querySelector("#wind");
+    wind.innerHTML = Math.round(response.data.wind.speed);
   }
   function currentPosition(position) {
     console.log(position.coords.latitude);
