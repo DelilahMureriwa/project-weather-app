@@ -1,6 +1,6 @@
 .card {
-  margin-top: 55px;
-  margin-left: 145px;
+  margin: 55px auto;
+  margin-bottom: 0;
   background: radial-gradient(
     circle at 10% 20%,
     rgb(223, 156, 156) 0%,
@@ -12,9 +12,10 @@
 h1 {
   font-size: 80px;
   color: #680747;
+  margin-top: 0;
 }
 button {
-  margin-left: 550px;
+  margin-left: 500px;
   margin-top: 10px;
   margin-bottom: 0;
   display: block;
@@ -75,4 +76,12 @@ form {
 
 .git-hub {
   text-align: center;
+}
+
+ul {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  color: #680747;
+  font-weight: bold;
 }
