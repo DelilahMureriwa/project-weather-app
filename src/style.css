@@ -3,8 +3,8 @@
   margin-bottom: 0;
   background: radial-gradient(
     circle at 10% 20%,
-    rgb(223, 156, 156) 0%,
-    rgb(180, 141, 219) 90%
+    rgb(223, 164, 164) 0%,
+    rgb(184, 150, 217) 90%
   );
   border: 1px solid rgba(126, 120, 120, 0.94);
   border-radius: 16px;
@@ -84,4 +84,5 @@ ul {
   padding: 0;
   color: #680747;
   font-weight: bold;
+  font-size: 20px;
 }
