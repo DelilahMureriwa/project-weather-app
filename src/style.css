@@ -1,5 +1,5 @@
 .card {
-  margin: 55px auto;
+  margin: 16px auto;
   margin-bottom: 0;
   background: radial-gradient(
     circle at 10% 20%,
@@ -41,7 +41,7 @@ button:hover {
   font-size: 95px;
 }
 #temp {
-  font-size: 90px;
+  font-size: 95px;
   color: #680747;
   font-weight: 120px;
 }
