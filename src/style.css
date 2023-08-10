@@ -1,5 +1,5 @@
 .card {
-  margin: 16px auto;
+  margin: 30px auto;
   margin-bottom: 0;
   background: radial-gradient(
     circle at 10% 20%,
@@ -10,7 +10,8 @@
   border-radius: 16px;
 }
 h1 {
-  font-size: 80px;
+  font-size: 65px;
+  font-weight: 460;
   color: #680747;
   margin-top: 0;
 }
@@ -37,20 +38,22 @@ button:hover {
   margin-left: 10px;
   color: #fff;
 }
-.sunny-cloud {
-  font-size: 95px;
+#icon {
+  margin-left: 20px;
+  margin-top: 8px;
+  width: 100px;
 }
 #temp {
-  font-size: 95px;
+  font-size: 70px;
   color: #680747;
   font-weight: 120px;
+  padding: 0;
 }
 .days {
   font-size: 17px;
   color: purple;
   font-weight: bold;
   margin-left: 10px;
-  margin-top: 25px;
 }
 .degrees {
   font-size: 13px;
@@ -66,10 +69,6 @@ form {
   margin-right: 30px;
 }
 
-.units {
-  margin-top: 31px;
-}
-
 .appearance {
   text-transform: capitalize;
 }
@@ -81,6 +80,7 @@ form {
 ul {
   list-style: none;
   margin-top: 20px;
+  margin-left: 30px;
   padding: 0;
   color: #680747;
   font-weight: bold;

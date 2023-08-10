@@ -43,6 +43,11 @@ function mainCity() {
     currentStatus.innerHTML = response.data.weather[0].description;
     let dateElement = document.querySelector(".day");
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
+    let icon = document.querySelector("#icon");
+    icon.setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
   }
   let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -71,6 +76,11 @@ function enterCity(event) {
     currentStatus.innerHTML = response.data.weather[0].description;
     let dateElement = document.querySelector(".day");
     dateElement.innerHTML = formatDate(response.data.dt *1000);
+    let icon = document.querySelector("#icon");
+    icon.setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
   }
 
   let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
@@ -100,6 +110,11 @@ function currentLocation(event) {
     wind.innerHTML = Math.round(response.data.wind.speed);
     let dateElement = document.querySelector(".day");
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
+    let icon = document.querySelector("#icon");
+    icon.setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
   }
   function currentPosition(position) {
     console.log(position.coords.latitude);
