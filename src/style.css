@@ -76,7 +76,10 @@ button:hover {
   font-weight: lighter;
 }
 
-
+#forecast-icon {
+  display: relative;
+  margin-left: -5px;
+}
 .appearance {
   text-transform: capitalize;
 }
