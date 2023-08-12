@@ -161,8 +161,8 @@ function displayForecast () {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  days.forEach(function(forecastDay) {
+  let forecastDays = ["MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  forecastDays.forEach(function(forecastDay) {
   forecastHTML = 
   forecastHTML +
   `
@@ -174,7 +174,7 @@ function displayForecast () {
          width="40"
        />
        <div class="forecast-temp">
-         <span class="forecast-temp-max">29°</span>
+         <span class="forecast-temp-max"><strong>29°</strong></span>
          <span class="forecast-temp-min">10°</span>
        </div>
      </div>

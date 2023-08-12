@@ -56,19 +56,12 @@ button:hover {
 }
 #forecast {
   font-size: 17px;
-  color: purple;
+  color: #680747;
   font-weight: bold;
   margin-left: 10px;
 }
-.degrees {
-  font-size: 13px;
-  color: blue;
-  margin-left: 10px;
-  word-spacing: 8px;
-}
-.emojis {
-  font-size: 30px;
-  margin-left: 10px;
+.forecast-temp{
+  font-weight: lighter;
 }
 form {
   margin-right: 30px;
