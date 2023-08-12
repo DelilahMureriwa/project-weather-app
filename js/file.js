@@ -171,7 +171,7 @@ function displayForecast () {
        <img
          src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
          alt="cloudy"
-         width="30"
+         width="40"
        />
        <div class="forecast-temp">
          <span class="forecast-temp-max">29°</span>
