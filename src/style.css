@@ -48,12 +48,13 @@ button:hover {
   color: #680747;
   font-weight: 120px;
   padding: 0;
+  margin-left: -20px;
 }
 .units {
   position: relative;
   top: -40px;
 }
-.days {
+#forecast {
   font-size: 17px;
   color: purple;
   font-weight: bold;

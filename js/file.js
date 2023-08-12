@@ -156,3 +156,32 @@ celsius.addEventListener("click", showCelsius);
 
 let button = document.querySelector("button");
 button.addEventListener("click", currentLocation);
+ 
+function displayForecast () {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function(forecastDay) {
+  forecastHTML = 
+  forecastHTML +
+  `
+     <div class="col-2">
+       <div class="forecast-day">${forecastDay}</div>
+       <img
+         src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+         alt="cloudy"
+         width="30"
+       />
+       <div class="forecast-temp">
+         <span class="forecast-temp-max">29°</span>
+         <span class="forecast-temp-min">10°</span>
+       </div>
+     </div>
+   `
+  });
+
+forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
+}
+displayForecast();
