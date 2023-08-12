@@ -32,6 +32,7 @@ function mainCity() {
   h1.innerHTML = `${city}`;
 
   function mainTemp(response) {
+    celsiusTemperature = response.data.main.temp;
     let temperature = Math.round(response.data.main.temp);
     let temp = document.querySelector("#temp");
     temp.innerHTML = `${temperature}`;
@@ -66,6 +67,7 @@ function enterCity(event) {
   }
 
   function currentTemperature(response) {
+    celsiusTemperature = response.data.main.temp;
     let temperature = Math.round(response.data.main.temp);
     let temp = document.querySelector("#temp");
     temp.innerHTML = `${temperature}`;
@@ -83,7 +85,7 @@ function enterCity(event) {
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
 
-    let celsiusTemperature = response.data.main.temp;
+   
   }
   
   let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
@@ -98,6 +100,7 @@ function currentLocation(event) {
   event.preventDefault();
 
   function currentCity(response) {
+    celsiusTemperature = response.data.main.temp;
     let city = response.data.name;
     let h1 = document.querySelector("h1");
     h1.innerHTML = `${city}`;
@@ -135,12 +138,16 @@ function currentLocation(event) {
  
 function showCelsius(event) {
   event.preventDefault();
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
   let temp = document.querySelector("#temp");
   temp.innerHTML = Math.round(celsiusTemperature);
 }
 
 function showFahrenheit(event) {
   event.preventDefault();
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
   let temp = document.querySelector("#temp");
   let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
   temp.innerHTML = Math.round(fahrenheitTemp);
