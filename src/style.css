@@ -15,6 +15,18 @@ h1 {
   color: #680747;
   margin-top: 0;
 }
+ul {
+  list-style: none;
+  margin-top: 20px;
+  margin-left: 30px;
+  padding: 0;
+  color: #680747;
+  font-weight: bold;
+  font-size: 20px;
+}
+form {
+  margin-right: 30px;
+}
 button {
   margin-left: 500px;
   margin-top: 10px;
@@ -63,9 +75,7 @@ button:hover {
 .forecast-temp{
   font-weight: lighter;
 }
-form {
-  margin-right: 30px;
-}
+
 
 .appearance {
   text-transform: capitalize;
@@ -75,15 +85,7 @@ form {
   text-align: center;
 }
 
-ul {
-  list-style: none;
-  margin-top: 20px;
-  margin-left: 30px;
-  padding: 0;
-  color: #680747;
-  font-weight: bold;
-  font-size: 20px;
-}
+
 .units .active {
    color: #680747;
   cursor: default;

@@ -49,6 +49,7 @@ function mainCity() {
       "src",
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+    weatherForecast(response.data.coord);
   }
   let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -84,7 +85,7 @@ function enterCity(event) {
       "src",
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
-
+    weatherForecast(response.data.coord);
    
   }
   
@@ -121,6 +122,7 @@ function currentLocation(event) {
       "src",
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+    weatherForecast(response.data.coord);
 
   }
   function currentPosition(position) {
@@ -164,7 +166,8 @@ celsius.addEventListener("click", showCelsius);
 let button = document.querySelector("button");
 button.addEventListener("click", currentLocation);
  
-function displayForecast () {
+function displayForecast (response) {
+  console.log(response.data.daily)
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -190,5 +193,14 @@ function displayForecast () {
 
 forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
+
 }
 displayForecast();
+
+function weatherForecast(coordinates) {
+  console.log(coordinates)
+  let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
+}
