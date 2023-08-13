@@ -42,8 +42,6 @@ function formatDay(timestamp) {
    return days[day];
 }
 
-
-
 function mainCity() {
   let city = `Harare`;
   let h1 = document.querySelector("h1");
@@ -144,8 +142,6 @@ function currentLocation(event) {
 
   }
   function currentPosition(position) {
-    console.log(position.coords.latitude);
-    console.log(position.coords.longitude);
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
     let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
@@ -172,17 +168,6 @@ function showFahrenheit(event) {
   let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
   temp.innerHTML = Math.round(fahrenheitTemp);
 }
-
-let celsiusTemperature = null;
-
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", showFahrenheit);
-
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", showCelsius);
-
-let button = document.querySelector("button");
-button.addEventListener("click", currentLocation);
  
 function displayForecast (response) {
   forecastDays = response.data.daily;
@@ -221,9 +206,19 @@ forecastElement.innerHTML = forecastHTML;
 }
 
 function weatherForecast(coordinates) {
-  console.log(coordinates)
   let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(displayForecast);
 }
+
+let celsiusTemperature = null;
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", showFahrenheit);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", showCelsius);
+
+let button = document.querySelector("button");
+button.addEventListener("click", currentLocation);
