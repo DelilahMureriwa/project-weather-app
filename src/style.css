@@ -66,6 +66,7 @@ button:hover {
   position: relative;
   top: -40px;
   font-size: 20px;
+  color: #680747;
 }
 #forecast {
   font-size: 17px;
